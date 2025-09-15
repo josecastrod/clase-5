@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chart.js</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+       
+        <p>Más información en <a href="https://www.chartjs.org/docs/latest/getting-started/" target="_blank">Chart.js</a>, y otro gráfico <<a href="index.html">portada</a>.</p>
+
+         <canvas id="aqui"></canvas>
+
+         <canvas id="allá"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            new Chart("aqui", {
+                type: "bar",
+                data: {
+      labels: ['Valparaíso', 'Biobío', 'Metropolitana', 'Antofagasta', 'Atacama'],
+      datasets: [ {
+            
+        label: 'catastro campamentos por región',
+        data: [374, 225, 168, 154, 147],
+
+         backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 50, 200, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+    borderWidth: 1
+  }]
+},
+      
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
+<script>
+            new Chart("allá", {
+                type: 'line',
+                data: {
+
+      labels: ['Valparaíso', 'Biobío', 'Metropolitana', 'Antofagasta', 'Atacama'],
+      datasets: [
+        {
+            label: 'catastro campamentos por región',
+        data: [101, 150, 87, 233, 126],
+        borderWidth: 1
+        
+    },
+    {
+        label: 'catastro campamentos por región',
+        data: [374, 225, 168, 154, 147],
+
+         backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 50, 200, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+    borderWidth: 1
+  }]
+},
+
+
+      
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+    </body>
+</html>
